@@ -1,0 +1,64 @@
+function setup() {
+    createCanvas(400, 400);
+}
+
+var x = 10;
+var changeInX = 3;
+var y = 5;
+var changeInY = 2;
+var z = 15;
+var changeInZ = 4;
+
+function draw() {
+    background(220);
+
+  // circle 1  
+  ellipse(x, 200, 40);
+
+    x = x + changeInX;
+
+    if (x > width) {
+        changeInX = -3;
+      fill(255,0,0);
+    }
+
+    if (x < 0) {
+        changeInX = 5;
+      fill(255,255,0);
+    } 
+
+  
+  // circle 2
+  ellipse(y, 300, 60);
+  
+  x = x + changeInX;
+  y = y + changeInY;
+
+    if (y > width) {
+        changeInY = -3;
+      fill(255,0,0);
+    }
+
+    if (y < 0) {
+        changeInY = 5;
+      fill(255,100,0);
+		}
+  
+  // circle 3
+  ellipse(z,100, 60);
+  
+  x = x + changeInX;
+  z = z + changeInZ;
+
+    if (z > width) {
+        changeInZ = -3;
+      fill(255,0,0);
+    }
+
+    if (z < 10) {
+        changeInZ = 5;
+      fill(255,200,50);
+    }
+    //I'm having trouble figuring out how to treat color differently for every circle since they're all still the same color
+    //when they bounce from each side of the canvas.
+}
