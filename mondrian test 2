@@ -1,0 +1,55 @@
+function setup() {
+	createCanvas(400, 400);
+}
+
+function draw() {
+	background(240);
+	noStroke();
+	strokeCap(SQUARE);
+
+	var blue = color(0, 0, 255);
+	var red = color(255, 0, 0);
+	var yellow = color(255, 255, 0);
+
+	var leftLineY = 30;
+	var lefttwoLineY = 80;
+  var middleLineY = 250;
+  var middletwoLineY = 280;
+  var rightLineY = 370;
+	
+	var topLineX = 30;
+  var toptwoLineX = 80;
+  var middleLineX = 250;
+  var middletwoLineX = 280;
+  var bottomLineX = 380;
+
+	fill(blue);
+	rect(topLineX, middleLineY,  50, 30);
+	rect(middletwoLineX, rightLineY, 100, 30);
+  
+	fill(red);
+	rect(toptwoLineX, toptwoLineX, 170, 170);
+  rect(bottomLineX,middleLineY,20,30);
+	
+	fill(yellow);
+	rect(topLineX, leftLineY, 50, 50);
+  rect(middleLineX,middleLineY,30,30);
+
+
+	stroke(150)
+  strokeWeight(7)
+	line(0,25, 400, 25);
+	line(0,80,400,80);
+  line(0,250,400,250);
+  line(0,280,400,280);
+  line(0,370,400,370)  
+  
+  stroke(0);
+	strokeWeight(7);
+	line(30, 0, 30, 400);
+	line(80,0,80,400);
+	line(250,0,250,400);
+  line(280,0,280,400);
+	line(380,0,380,400)
+//I think I messed up in the line functions since they won't move with the canvas if you change the size of it
+}
